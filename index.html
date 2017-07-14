@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header flex flex--aligned">
+    <div class="container flex__full flex flex--aligned flex--spaced">
+      <a href="/" class="header__logo"><img src="//www.expedia.com/_dms/header/logo.svg?locale=en_US&siteid=1" alt=""></a>
+      <div class="flex flex--aligned header__actions">
+        <i class="fa fa-bell header__action"></i>
+        <a href="/lists.html" class="header__link lists-link" id="heart-nav">
+          <i class="fa fa-heart header__action" id="header-heart"></i>
+          <span class="badge lists-link__badge"></span>
+        </a>
+        <i class="fa fa-user-circle header__action"></i>
+        <i class="fa fa-navicon header__action"></i>
+      </div>
+    </div>
+  </header>
+  <section class="hero">
+    <h1 class="hero__title flex__full">
+      Los Angeles
+      <input type="checkbox" class="heart" data-suggestion="Los Angeles trip" data-item-id="los-angeles">
+    </h1>
+  </section>
+  <div class="container">
+    <div class="grid grid--halves">
+      <div class="card">
+        <h4>Beaches</h4>
+        <input type="checkbox" class="heart card__heart" data-suggestion="Los Angeles trip" data-item-id="los-angeles-beaches">
+      </div>
+      <div class="card">
+        <h4>Surfing</h4>
+        <input type="checkbox" class="heart card__heart" data-suggestion="Los Angeles trip" data-item-id="los-angeles-surfing">
+      </div>
+    </div>
+    <div class="card">
+      <h4>Santa Monica</h4>
+      <input type="checkbox" class="heart card__heart" data-suggestion="Los Angeles trip" data-item-id="los-angeles-santa-monica">
+    </div>
+  </div>
+  <div class="modal" id="modal">
+    <div class="modal__content" id="modal-content">
+      <div class="card">
+        <h2>Choose a list</h2>
+        <form action="" class="lists" id="lists-form">
+          <label class="flex flex--aligned" for="my-favourites">
+            <input type="checkbox" class="lists__option" id="my-favourites" data-list-name="My Favourites">
+            My Favourites
+          </label>
+          <label class="flex flex--aligned" for="new-list-checkbox" id="new-list-button">
+            <input type="checkbox" class="lists__option" id="new-list-checkbox">
+            <span id="new-list-value">New list</span>
+          </label>
+          <input type="text" id="new-list-input" hidden class="lists__new">
+          <button id="lists-save-button" class="btn lists__action">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="toast" class="toast">
+    <p class="flex flex--aligned" hidden id="single-list-message">Saved to <span id="single-list-name" style="padding-left: 4px"></span> <strong class="toast__action">Change</strong></p>
+    <p class="flex flex--aligned" hidden id="multiple-list-message">Saved to multiple lists <strong class="toast__action">Change</strong></p>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+</html>

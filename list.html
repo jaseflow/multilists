@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header flex flex--aligned">
+    <div class="container flex__full flex flex--aligned flex--spaced">
+      <a href="/" class="header__logo"><img src="//www.expedia.com/_dms/header/logo.svg?locale=en_US&siteid=1" alt=""></a>
+      <div class="flex flex--aligned header__actions">
+        <i class="fa fa-bell header__action"></i>
+        <a href="/lists.html" class="header__link" id="heart-nav">
+          <i class="fa fa-heart header__action" id="header-heart"></i>
+          <span class="badge lists-link__badge"></span>
+        </a>
+        <i class="fa fa-user-circle header__action"></i>
+        <i class="fa fa-navicon header__action"></i>
+      </div>
+    </div>
+  </header>
+  <section class="hero">
+    <a href="/lists.html" class="hero__back"><i class="fa fa-chevron-left"></i> My Lists</a>
+    <div class="hero__footer">
+      <h1>My Favorites</h1>
+    </div>
+  </section>
+  <div class="container" style="padding-top: 12px">
+    <div class="item">
+      <div class="item__img"></div>
+      <div class="item__content">
+        <h3>Hollywood Walk of Fame</h3>
+        <input type="checkbox" checked class="heart item__heart" data-suggestion="Los Angeles trip" data-item-id="los-angeles-beaches">
+      </div>
+    </div>
+    <div class="item">
+      <div class="item__img"></div>
+      <div class="item__content">
+        <h3>Santa Monica</h3>
+        <input type="checkbox" checked class="heart item__heart" data-suggestion="Los Angeles trip" data-item-id="los-angeles-beaches">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
