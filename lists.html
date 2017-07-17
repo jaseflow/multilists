@@ -10,7 +10,7 @@
 <body>
   <header class="header flex flex--aligned">
     <div class="container flex__full flex flex--aligned flex--spaced">
-      <a href="/multilists" class="header__logo"><img src="//www.expedia.com/_dms/header/logo.svg?locale=en_US&siteid=1" alt=""></a>
+      <a href="index.html" class="header__logo"><img src="//www.expedia.com/_dms/header/logo.svg?locale=en_US&siteid=1" alt=""></a>
       <div class="flex flex--aligned header__actions">
         <i class="fa fa-bell header__action"></i>
         <a href="lists.html" class="header__link" id="heart-nav">
@@ -26,16 +26,40 @@
     <h1>My Lists</h1>
     <div class="lists">
       <a href="#" class="card">
-        <h4>Maui Vacation</h4>
+        <h3 class="flex flex--aligned">My Favourites</h3>
       </a>
       <a href="list.html" class="card">
-        <h4 class="flex flex--aligned">My Favourites</h4>
+        <h3 class="flex flex--aligned">Wishlist</h3>
       </a>
       <a href="#" class="card">
-        <h4>Recently viewed</h4>
+        <h3>Recently viewed</h3>
       </a>
     </div>
-    <p><a href="#">Add a list</a></p>
+  </div>
+  <div class="modal" id="modal">
+    <div class="modal__content" id="modal-content">
+      <div class="card">
+        <h2>Choose a list</h2>
+        <form action="" class="lists" id="lists-form">
+          <label class="flex flex--aligned" for="my-favourites">
+            <input type="checkbox" class="lists__option" id="my-favourites" data-list-name="My Favourites">
+            My Favourites
+          </label>
+          <div id="above-here"></div>
+          <label class="flex flex--aligned" for="new-list-checkbox" id="new-list-button">
+            <input type="checkbox" class="lists__option" id="new-list-checkbox">
+            <span id="new-list-value">New list</span>
+          </label>
+          <input type="text" id="new-list-input" autocomplete="off" hidden class="lists__new">
+          <button id="lists-save-button" class="btn lists__action">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="toast" class="toast">
+    <p class="flex flex--aligned" hidden id="single-list-message">Saved to <span id="single-list-name" style="padding-left: 4px"></span> <strong class="toast__action" id="">Change</strong></p>
+    <p class="flex flex--aligned" hidden id="multiple-list-message">Saved to multiple lists <strong class="toast__action">Change</strong></p>
+    <p class="flex flex--aligned" hidden id="removal-list-message">Removed from Wishlist <strong class="toast__action">Change</strong></p>
   </div>
 </body>
 </html>
